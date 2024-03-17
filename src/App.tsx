@@ -1,3 +1,11 @@
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./styles/globalTheme";
+import { defaultTheme } from "./styles/defaultThemes";
+
 export function App() {
-  return <h1>ToDo - List</h1>;
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyles />
+    </ThemeProvider>
+  );
 }
