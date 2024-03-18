@@ -3,6 +3,7 @@ import { GlobalStyles } from "./styles/globalTheme";
 import { defaultTheme } from "./styles/defaultThemes";
 import { Header } from "./components/header";
 import { InputForm } from "./components/inputForm";
+import { Status } from "./components/status";
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <GlobalStyles />
       <Header />
       <InputForm />
+      <Status />
     </ThemeProvider>
   );
 }

@@ -31,4 +31,4 @@ export const defaultTheme = {
       bold: "700",
     },
   },
-};
+} as const;
