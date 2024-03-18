@@ -4,6 +4,7 @@ import { defaultTheme } from "./styles/defaultThemes";
 import { Header } from "./components/header";
 import { InputForm } from "./components/inputForm";
 import { Status } from "./components/status";
+import { EmptyTask } from "./components/emptyTask";
 
 export function App() {
   return (
@@ -12,6 +13,8 @@ export function App() {
       <Header />
       <InputForm />
       <Status />
+
+      <EmptyTask />
     </ThemeProvider>
   );
 }
