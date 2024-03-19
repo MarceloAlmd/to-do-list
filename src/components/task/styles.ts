@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
 interface TaskProps {
-  status?: "done" | "progress";
+  status: "done" | "progress";
 }
 
 export const Container = styled.div<TaskProps>`
   width: 100%;
-  max-width: 46rem;
+  max-width: 44rem;
   margin: 1.5rem auto -0.75rem;
 
   display: flex;
@@ -21,6 +21,8 @@ export const Container = styled.div<TaskProps>`
   border: 1px solid ${(props) => props.theme.base["gray-400"]};
 
   .task {
+    flex: 1;
+
     ${(props) =>
       props.status === "done" &&
       css`

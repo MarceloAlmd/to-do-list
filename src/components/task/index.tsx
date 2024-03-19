@@ -1,20 +1,28 @@
 import { Check, Circle, Trash } from "phosphor-react";
 import * as Styles from "./styles";
+import { TaskCompProps } from "./task";
 
-export function Task() {
+export function Task({
+  taskDescription,
+  handleRemoveTask,
+  handleCheckTask,
+  handleUncheckTask,
+  status,
+}: TaskCompProps) {
   return (
-    <Styles.Container status="progress">
-      <button type="button" className="circle">
-        <Circle size={24} />
-      </button>
-      {/* <button type="button" className="check">
-        <Check size={17} />
-      </button> */}
-      <span className="task">
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
-      </span>
-      <button type="button">
+    <Styles.Container status={status}>
+      {status === "progress" ? (
+        <button type="button" className="circle" onClick={handleCheckTask}>
+          <Circle size={18} />
+        </button>
+      ) : (
+        <button type="button" className="check" onClick={handleUncheckTask}>
+          <Check size={17} />
+        </button>
+      )}
+
+      <span className="task">{taskDescription}</span>
+      <button type="button" onClick={handleRemoveTask}>
         <Trash />
       </button>
     </Styles.Container>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 46rem;
+  max-width: 44rem;
   margin: 4.5rem auto 0;
 
   display: flex;
@@ -19,6 +19,8 @@ export const Container = styled.div`
   gap: 1rem;
 
   > div {
+    text-align: center;
+
     p:first-child {
       color: ${(props) => props.theme.base["gray-300"]};
       font-weight: ${(props) => props.theme.typography.weights.bold};
