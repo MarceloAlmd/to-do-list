@@ -17,7 +17,7 @@ export function Task({
         </button>
       ) : (
         <button type="button" className="check" onClick={handleUncheckTask}>
-          <Check size={17} />
+          <Check size={14} />
         </button>
       )}
 

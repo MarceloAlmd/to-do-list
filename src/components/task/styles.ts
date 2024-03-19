@@ -60,6 +60,8 @@ export const Container = styled.div<TaskProps>`
     cursor: pointer;
     border-radius: 50%;
 
+    margin-left: 1px;
+
     > svg {
       color: ${(props) => props.theme.base["gray-100"]};
       background-color: ${(props) => props.theme.product.purpleDark};
