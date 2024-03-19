@@ -5,6 +5,7 @@ import { Header } from "./components/header";
 import { InputForm } from "./components/inputForm";
 import { Status } from "./components/status";
 import { EmptyTask } from "./components/emptyTask";
+import { Task } from "./components/task";
 
 export function App() {
   return (
@@ -14,7 +15,10 @@ export function App() {
       <InputForm />
       <Status />
 
-      <EmptyTask />
+      {/* <EmptyTask /> */}
+      <Task />
+      <Task />
+      <Task />
     </ThemeProvider>
   );
 }
